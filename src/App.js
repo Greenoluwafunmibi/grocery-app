@@ -26,7 +26,7 @@ function App() {
     dispatch(addNote({
       id: nanoid(),
       text: input,
-      price: Math.round(amount),
+      price: Number(amount),
     }));
 
     setInput("");

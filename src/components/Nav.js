@@ -19,10 +19,10 @@ const Nav = () => {
     }
 
     let pricesSum =  pricesArray.reduce((accumulator, currentValue)=>{
-        return accumulator + currentValue;
+        return (accumulator + currentValue);
     }, 0);
     
-    
+    const pricesDisplay = new Intl.NumberFormat().format(pricesSum);
 
    
   return (
@@ -32,7 +32,7 @@ const Nav = () => {
             <div className="icons-div">
                 <div className="money-icons-div">
                     <GiMoneyStack className="icons money"/>
-                    <h3> &#163;{pricesSum}</h3>
+                    <h3> &#163;{pricesDisplay}</h3>
 
                 </div>
                 
